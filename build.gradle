@@ -22,7 +22,8 @@ version = '0.1'
 tasks.withType(JavaCompile) {
     //A�adir la opci�n Xlint
     options.deprecation = true
-    options.encoding = 'ISO-8859-1'
+  //  options.encoding = 'ISO-8859-1'
+    options.encoding = 'UTF-8'
 }
 
 tasks.withType(Javadoc){
@@ -63,7 +64,7 @@ dependencies {
   
     // https://mvnrepository.com/artifact/org.kohsuke/github-api
     //JAVADOC: https://github-api.kohsuke.org/apidocs/index.html
-    api 'org.kohsuke:github-api:1.301'
+     api 'org.kohsuke:github-api:1.301'
     //Para la persistencia de informes usaremos la api apachepoi
     // https://mvnrepository.com/artifact/org.apache.poi/poi
     //JAVADOC: https://poi.apache.org/apidocs/5.0/
@@ -87,9 +88,10 @@ dependencies {
     //JAVADOC: https://javadoc.io/doc/org.mockito/mockito-junit-jupiter/latest/index.html
     testImplementation 'org.mockito:mockito-junit-jupiter:4.3.1'
  
-    testImplementation(platform('org.junit:junit-bom:5.8.2'))
-    //JAVADOC: https://www.javadoc.io/doc/org.junit.jupiter/junit-jupiter-api/latest/index.html
-    testImplementation('org.junit.jupiter:junit-jupiter')
+	testImplementation(platform('org.junit:junit-bom:5.8.2'))
+	//JAVADOC: https://www.javadoc.io/doc/org.junit.jupiter/junit-jupiter-api/latest/index.html
+	testImplementation('org.junit.jupiter:junit-jupiter')
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
 }
 
