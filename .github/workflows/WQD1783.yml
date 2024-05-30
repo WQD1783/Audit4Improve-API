@@ -1,0 +1,13 @@
+name: Workflow for UVUS WQD1783
+on:
+  workflow_dispatch:
+  issues: 
+    types: [ opened, reopened, edited, transferred ]
+
+jobs:
+    UVUS:
+        runs-on: ubuntu-latest
+        steps:
+        -   name: My UVUS
+            run: |
+                echo "My UVUS is WQD1783"
