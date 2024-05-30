@@ -213,6 +213,7 @@ public class GitHubRepositoryEnquirer extends GitHubEnquirer {
 		case "totalDeletions":
 			metric = getTotalDeletions(remoteRepo);
 			break;
+		// TODO Add support for metrics needed in the project
 		default:
 			throw new MetricException("La métrica " + metricName + " no está definida para un repositorio");
 		}
